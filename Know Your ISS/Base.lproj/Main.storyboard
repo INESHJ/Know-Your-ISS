@@ -16,10 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="yBp-jN-TcN" kind="relationship" relationship="viewControllers" id="5Mi-XU-NCi"/>
-                        <segue destination="26T-EF-uhh" kind="relationship" relationship="viewControllers" id="dsF-36-KAd"/>
+                        <segue destination="aQb-ZF-tdP" kind="relationship" relationship="viewControllers" id="IEm-BW-7B3"/>
+                        <segue destination="26T-EF-uhh" kind="relationship" relationship="viewControllers" id="2Cl-CZ-RFV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NxX-be-DuQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -36,11 +37,15 @@
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="2zN-Wt-xbi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="nB0-Gj-ueK"/>
+                    <tabBarItem key="tabBarItem" title="About" image="person" catalog="system" selectedImage="about" id="nB0-Gj-ueK">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="about"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xq9-DH-H2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-205" y="96"/>
+            <point key="canvasLocation" x="707" y="424"/>
         </scene>
         <!--Live Location-->
         <scene sceneID="vsc-FS-jba">
@@ -60,7 +65,6 @@
                                 </state>
                                 <connections>
                                     <action selector="apiCall:" destination="yBp-jN-TcN" eventType="touchUpInside" id="RWW-9h-pip"/>
-                                    <segue destination="aQb-ZF-tdP" kind="show" id="r0w-vk-rWu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,43 +79,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLH-Nh-lJc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-200.00000000000003" y="-582.58928571428567"/>
+            <point key="canvasLocation" x="1090" y="-389"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Live Location-->
         <scene sceneID="6pu-bZ-lO6">
             <objects>
                 <viewController id="aQb-ZF-tdP" customClass="MapViewController" customModule="Know_Your_ISS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a1x-XW-OIb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hIF-1l-v87">
-                                <rect key="frame" x="0.0" y="-53" width="414" height="895"/>
+                                <rect key="frame" x="0.0" y="1" width="414" height="895"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2z-F6-4YT">
-                                <rect key="frame" x="20" y="12" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwg-qr-FZR">
+                                <rect key="frame" x="20" y="738" width="374" height="35"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Check Live Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="6AT-8E-GGq" kind="show" id="4MR-bz-JdD"/>
+                                    <action selector="btnClick:" destination="aQb-ZF-tdP" eventType="touchUpInside" id="iKW-F5-8wA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwP-8c-GOe">
+                                <rect key="frame" x="20" y="729" width="374" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="bottom" secondItem="Hwg-qr-FZR" secondAttribute="bottom" constant="40" id="ACa-2W-NSW"/>
+                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="trailing" secondItem="Hwg-qr-FZR" secondAttribute="trailing" constant="20" id="S4Q-bx-Xnz"/>
+                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="trailing" secondItem="XwP-8c-GOe" secondAttribute="trailing" constant="20" id="VNB-PZ-pIx"/>
+                            <constraint firstItem="Hwg-qr-FZR" firstAttribute="leading" secondItem="9Nz-s0-gtY" secondAttribute="leading" constant="20" id="XcP-MP-C4Q"/>
+                            <constraint firstItem="XwP-8c-GOe" firstAttribute="leading" secondItem="9Nz-s0-gtY" secondAttribute="leading" constant="20" id="hUu-nN-fMr"/>
+                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="bottom" secondItem="XwP-8c-GOe" secondAttribute="bottom" constant="40" id="sQI-hD-6W0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9Nz-s0-gtY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Live Location" image="location" catalog="system" selectedImage="satellitedish" id="yqo-qC-QKM">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="satellitedish"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="lo0-SB-ePq"/>
                     <connections>
                         <outlet property="mapView" destination="hIF-1l-v87" id="yfs-ta-aRX"/>
+                        <outlet property="txtLabel" destination="XwP-8c-GOe" id="L1V-hl-Crn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vda-J1-erx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597.10144927536237" y="-581.25"/>
+            <point key="canvasLocation" x="-2328" y="376"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="about" width="32" height="32"/>
+        <image name="location" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="satellitedish" width="32" height="32"/>
+    </resources>
 </document>
