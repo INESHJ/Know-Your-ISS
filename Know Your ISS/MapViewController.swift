@@ -7,8 +7,7 @@
 //
 
 
-//Credits: Freepik, 
-
+//Credits: Freepik
 
 import UIKit
 import MapKit
@@ -44,11 +43,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 print("LATITUDE FROM API: \(self.lat)")
                 print("LONGITUDE FROM API: \(self.lon)")
                 
+                let truncLat = Double(String(format: "%.1f", (self.lat * 10000)).dropLast(2))!/10000
+                let truncLon = Double(String(format: "%.1f", (self.lon * 10000)).dropLast(2))!/10000
+                print("Truncated Latitude : \(truncLat)")
+                print("Truncated Longitude :\(truncLon)")
+
+                
 //                print("The International Space Station is at latitude \(String(self.lat)) and longitude \(String(self.lon)), at the speed of []km/hr")
                 
                 DispatchQueue.main.async {
                     self.updateMap(lat: self.lat, lon: self.lon)
-                    self.txtLabel.text = "The International Space Station is at latitude \(String(self.lat)) and longitude \(String(self.lon)), at the speed of \(json.velocity) km/hr"
+                    self.txtLabel.text = "The International Space Station currently on latitude \(truncLat) and longitude \(truncLon), at the speed of \(json.velocity) km/hr"
                 }
                 
     //            DispatchQueue.main.async {
