@@ -18,7 +18,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var lat: Double = 0
     var lon: Double = 0
     var string: String = "Hello World"
-    
+        
     func getData(url: String){
             URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
             guard let data = data, error == nil else {
@@ -98,7 +98,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { timer in
             let url = "https://api.wheretheiss.at/v1/satellites/25544"
             self.getData(url: url)
-        }
+                    }
         
         txtLabel.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
         txtLabel.textColor = .black
