@@ -19,6 +19,15 @@ The application is at a basic fully functional stage where further updates can b
 
 These are some of the technologies used here currently.
 
+
+## Future Updates/ potential improvements:
+1) Visualizing the projected path/ travelled path of the ISS.
+2) Adding a live feed for a view from/ of the ISS live from space!
+3) Adding features like notifications when the ISS passes above the user location.
+4) Distance from the current location to the projected location of the ISS.
+5) Settings tab for conversion of units/ other attributes.
+6) Taking inputs to personalize the user experience.
+
 ## Download 
 
 ## Contact Me!
