@@ -31,6 +31,6 @@ These are some of the technologies used here currently.
 ## Download 
 
 ## Contact Me!
-Feel free to contact me for suggestions :)
+Feel free to contact me with suggestions :)
 ineshj2806@gmail.com
 
