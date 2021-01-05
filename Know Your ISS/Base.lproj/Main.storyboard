@@ -154,7 +154,7 @@ It's an important place to carry out tests and research that will help future sp
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csa-hS-7tD">
-                                <rect key="frame" x="102" y="333" width="230" height="230"/>
+                                <rect key="frame" x="102" y="334" width="230" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
@@ -187,9 +187,8 @@ It's an important place to carry out tests and research that will help future sp
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hIF-1l-v87">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hIF-1l-v87">
                                 <rect key="frame" x="0.0" y="1" width="414" height="895"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwg-qr-FZR">
                                 <rect key="frame" x="20" y="738" width="374" height="35"/>
@@ -208,9 +207,22 @@ It's an important place to carry out tests and research that will help future sp
                                     <action selector="btnClick:" destination="aQb-ZF-tdP" eventType="touchUpInside" id="iKW-F5-8wA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwP-8c-GOe">
-                                <rect key="frame" x="20" y="729" width="374" height="44"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TOW-HA-r6U">
+                                <rect key="frame" x="215" y="58" width="179" height="32"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeChange:" destination="aQb-ZF-tdP" eventType="valueChanged" id="zv9-ks-l2y"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwP-8c-GOe">
+                                <rect key="frame" x="20" y="689" width="374" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="A09-RQ-eXi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -219,12 +231,19 @@ It's an important place to carry out tests and research that will help future sp
                         <viewLayoutGuide key="safeArea" id="9Nz-s0-gtY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="bottom" secondItem="Hwg-qr-FZR" secondAttribute="bottom" constant="40" id="ACa-2W-NSW"/>
-                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="trailing" secondItem="Hwg-qr-FZR" secondAttribute="trailing" constant="20" id="S4Q-bx-Xnz"/>
-                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="trailing" secondItem="XwP-8c-GOe" secondAttribute="trailing" constant="20" id="VNB-PZ-pIx"/>
-                            <constraint firstItem="Hwg-qr-FZR" firstAttribute="leading" secondItem="9Nz-s0-gtY" secondAttribute="leading" constant="20" id="XcP-MP-C4Q"/>
-                            <constraint firstItem="XwP-8c-GOe" firstAttribute="leading" secondItem="9Nz-s0-gtY" secondAttribute="leading" constant="20" id="hUu-nN-fMr"/>
-                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="bottom" secondItem="XwP-8c-GOe" secondAttribute="bottom" constant="40" id="sQI-hD-6W0"/>
+                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="bottom" secondItem="XwP-8c-GOe" secondAttribute="bottom" constant="24" id="2HL-xg-tJQ"/>
+                            <constraint firstItem="hIF-1l-v87" firstAttribute="centerX" secondItem="XwP-8c-GOe" secondAttribute="centerX" id="8os-ms-TB0"/>
+                            <constraint firstItem="TOW-HA-r6U" firstAttribute="top" secondItem="9Nz-s0-gtY" secondAttribute="top" constant="14" id="IYM-3j-s7c"/>
+                            <constraint firstAttribute="trailing" secondItem="hIF-1l-v87" secondAttribute="trailing" id="Jd9-PZ-hwq"/>
+                            <constraint firstItem="XwP-8c-GOe" firstAttribute="leading" secondItem="Hwg-qr-FZR" secondAttribute="leading" id="S5F-5y-fIr"/>
+                            <constraint firstAttribute="bottom" secondItem="hIF-1l-v87" secondAttribute="bottom" id="SFN-Kk-hnL"/>
+                            <constraint firstItem="hIF-1l-v87" firstAttribute="centerY" secondItem="a1x-XW-OIb" secondAttribute="centerY" id="dWY-8J-nHF"/>
+                            <constraint firstItem="hIF-1l-v87" firstAttribute="leading" secondItem="a1x-XW-OIb" secondAttribute="leading" id="ow7-nm-hoO"/>
+                            <constraint firstItem="XwP-8c-GOe" firstAttribute="leading" secondItem="a1x-XW-OIb" secondAttribute="leadingMargin" id="u3I-3b-hl9"/>
+                            <constraint firstItem="9Nz-s0-gtY" firstAttribute="bottom" secondItem="Hwg-qr-FZR" secondAttribute="bottom" constant="40" id="uF1-bx-Xme"/>
+                            <constraint firstItem="XwP-8c-GOe" firstAttribute="trailing" secondItem="Hwg-qr-FZR" secondAttribute="trailing" id="vWF-9a-mhP"/>
+                            <constraint firstItem="TOW-HA-r6U" firstAttribute="leading" secondItem="9Nz-s0-gtY" secondAttribute="leading" constant="215" id="xhE-h4-EpO"/>
+                            <constraint firstItem="TOW-HA-r6U" firstAttribute="trailing" secondItem="Hwg-qr-FZR" secondAttribute="trailing" id="zor-8l-c1z"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Live Location" image="location" catalog="system" selectedImage="satellitedish" id="yqo-qC-QKM">
@@ -235,19 +254,20 @@ It's an important place to carry out tests and research that will help future sp
                     <navigationItem key="navigationItem" id="lo0-SB-ePq"/>
                     <connections>
                         <outlet property="mapView" destination="hIF-1l-v87" id="yfs-ta-aRX"/>
+                        <outlet property="segmentedControl" destination="TOW-HA-r6U" id="ObE-Gf-yur"/>
                         <outlet property="txtLabel" destination="XwP-8c-GOe" id="L1V-hl-Crn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vda-J1-erx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2328" y="376"/>
+            <point key="canvasLocation" x="-2328.985507246377" y="375.66964285714283"/>
         </scene>
     </scenes>
     <resources>
         <image name="about" width="32" height="32"/>
         <image name="location" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="satellite 3" width="64" height="64"/>
+        <image name="satellite 3" width="128" height="128"/>
         <image name="satellitedish" width="128" height="128"/>
         <systemColor name="systemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>

@@ -14,10 +14,13 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var txtLabel: UILabel!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var lat: Double = 0
     var lon: Double = 0
     var string: String = "Hello World"
+    
+//    var coordinatesArray = []
         
     func getData(url: String){
             URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
@@ -125,6 +128,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
        annotationView.canShowCallout = true
           annotationView.image =  UIImage(imageLiteralResourceName: "satellite 3")
           return annotationView
+    }
+    
+    
+    @IBAction func mapTypeChange(_ sender: Any) {
+        
+        switch segmentedControl.selectedSegmentIndex
+                   {
+                   case 0:
+                    mapView.mapType = MKMapType.standard
+                   case 1:
+                    mapView.mapType = MKMapType.hybrid
+                   default:
+                       break
+                   }
     }
     
 }
