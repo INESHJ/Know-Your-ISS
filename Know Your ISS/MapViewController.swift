@@ -15,6 +15,7 @@ import MapKit
 class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var txtLabel: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var MoreButton: UIButton!
     
     var lat: Double = 0
     var lon: Double = 0
@@ -48,8 +49,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 
                 let truncLat = Double(String(format: "%.1f", (self.lat * 10000)).dropLast(2))!/10000
                 let truncLon = Double(String(format: "%.1f", (self.lon * 10000)).dropLast(2))!/10000
-                print("Truncated Latitude : \(truncLat)")
-                print("Truncated Longitude :\(truncLon)")
+//                print("Truncated Latitude : \(truncLat)")
+//                print("Truncated Longitude :\(truncLon)")
 
                 
 //                print("The International Space Station is at latitude \(String(self.lat)) and longitude \(String(self.lon)), at the speed of []km/hr")
@@ -105,6 +106,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         txtLabel.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
         txtLabel.textColor = .black
+        
+        
     }
     
     func printLatLon(for mapView: MKMapView, lat: Double, lon: Double) {
@@ -143,5 +146,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                        break
                    }
     }
+    
     
 }

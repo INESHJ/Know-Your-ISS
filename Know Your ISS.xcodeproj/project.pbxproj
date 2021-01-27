@@ -17,6 +17,7 @@
 		C02E6F3B259A1B1C000428F6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F3A259A1B1C000428F6 /* MapViewController.swift */; };
 		C02E6F3D259A2732000428F6 /* InfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F3C259A2732000428F6 /* InfoManager.swift */; };
 		C02E6F3F259A2E3A000428F6 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F3E259A2E3A000428F6 /* Annotation.swift */; };
+		C0E6ABA525B8935A00DE2FF5 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E6ABA425B8935A00DE2FF5 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C02E6F3A259A1B1C000428F6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C02E6F3C259A2732000428F6 /* InfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoManager.swift; sourceTree = "<group>"; };
 		C02E6F3E259A2E3A000428F6 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		C0E6ABA425B8935A00DE2FF5 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C02E6F282599B4C2000428F6 /* Main.storyboard */,
 				C02E6F262599B4C2000428F6 /* ViewController.swift */,
 				C02E6F3A259A1B1C000428F6 /* MapViewController.swift */,
+				C0E6ABA425B8935A00DE2FF5 /* MoreViewController.swift */,
 				C02E6F382599D7EC000428F6 /* AboutViewController.swift */,
 				C02E6F2B2599B4C5000428F6 /* Assets.xcassets */,
 				C02E6F2D2599B4C5000428F6 /* LaunchScreen.storyboard */,
@@ -155,6 +158,7 @@
 				C02E6F392599D7EC000428F6 /* AboutViewController.swift in Sources */,
 				C02E6F3B259A1B1C000428F6 /* MapViewController.swift in Sources */,
 				C02E6F252599B4C2000428F6 /* SceneDelegate.swift in Sources */,
+				C0E6ABA525B8935A00DE2FF5 /* MoreViewController.swift in Sources */,
 				C02E6F3F259A2E3A000428F6 /* Annotation.swift in Sources */,
 				C02E6F3D259A2732000428F6 /* InfoManager.swift in Sources */,
 			);
