@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02539B425C2B0DB009FEBED /* Timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02539B325C2B0DB009FEBED /* Timestamps.swift */; };
 		C02E6F232599B4C2000428F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F222599B4C2000428F6 /* AppDelegate.swift */; };
 		C02E6F252599B4C2000428F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F242599B4C2000428F6 /* SceneDelegate.swift */; };
-		C02E6F272599B4C2000428F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F262599B4C2000428F6 /* ViewController.swift */; };
 		C02E6F2A2599B4C2000428F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02E6F282599B4C2000428F6 /* Main.storyboard */; };
 		C02E6F2C2599B4C5000428F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02E6F2B2599B4C5000428F6 /* Assets.xcassets */; };
 		C02E6F2F2599B4C5000428F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02E6F2D2599B4C5000428F6 /* LaunchScreen.storyboard */; };
-		C02E6F392599D7EC000428F6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F382599D7EC000428F6 /* AboutViewController.swift */; };
 		C02E6F3B259A1B1C000428F6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F3A259A1B1C000428F6 /* MapViewController.swift */; };
 		C02E6F3D259A2732000428F6 /* InfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F3C259A2732000428F6 /* InfoManager.swift */; };
 		C02E6F3F259A2E3A000428F6 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E6F3E259A2E3A000428F6 /* Annotation.swift */; };
@@ -21,15 +20,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C02539B325C2B0DB009FEBED /* Timestamps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamps.swift; sourceTree = "<group>"; };
 		C02E6F1F2599B4C2000428F6 /* Know Your ISS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Know Your ISS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02E6F222599B4C2000428F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C02E6F242599B4C2000428F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C02E6F262599B4C2000428F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C02E6F292599B4C2000428F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C02E6F2B2599B4C5000428F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02E6F2E2599B4C5000428F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02E6F302599B4C5000428F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C02E6F382599D7EC000428F6 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C02E6F3A259A1B1C000428F6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C02E6F3C259A2732000428F6 /* InfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoManager.swift; sourceTree = "<group>"; };
 		C02E6F3E259A2E3A000428F6 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
@@ -69,15 +67,14 @@
 				C02E6F222599B4C2000428F6 /* AppDelegate.swift */,
 				C02E6F242599B4C2000428F6 /* SceneDelegate.swift */,
 				C02E6F282599B4C2000428F6 /* Main.storyboard */,
-				C02E6F262599B4C2000428F6 /* ViewController.swift */,
 				C02E6F3A259A1B1C000428F6 /* MapViewController.swift */,
 				C0E6ABA425B8935A00DE2FF5 /* MoreViewController.swift */,
-				C02E6F382599D7EC000428F6 /* AboutViewController.swift */,
 				C02E6F2B2599B4C5000428F6 /* Assets.xcassets */,
 				C02E6F2D2599B4C5000428F6 /* LaunchScreen.storyboard */,
 				C02E6F302599B4C5000428F6 /* Info.plist */,
 				C02E6F3C259A2732000428F6 /* InfoManager.swift */,
 				C02E6F3E259A2E3A000428F6 /* Annotation.swift */,
+				C02539B325C2B0DB009FEBED /* Timestamps.swift */,
 			);
 			path = "Know Your ISS";
 			sourceTree = "<group>";
@@ -109,7 +106,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Inesh Jupudy";
 				TargetAttributes = {
 					C02E6F1E2599B4C2000428F6 = {
@@ -153,11 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C02E6F272599B4C2000428F6 /* ViewController.swift in Sources */,
 				C02E6F232599B4C2000428F6 /* AppDelegate.swift in Sources */,
-				C02E6F392599D7EC000428F6 /* AboutViewController.swift in Sources */,
 				C02E6F3B259A1B1C000428F6 /* MapViewController.swift in Sources */,
 				C02E6F252599B4C2000428F6 /* SceneDelegate.swift in Sources */,
+				C02539B425C2B0DB009FEBED /* Timestamps.swift in Sources */,
 				C0E6ABA525B8935A00DE2FF5 /* MoreViewController.swift in Sources */,
 				C02E6F3F259A2E3A000428F6 /* Annotation.swift in Sources */,
 				C02E6F3D259A2732000428F6 /* InfoManager.swift in Sources */,
@@ -212,6 +208,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -236,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,6 +269,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -290,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

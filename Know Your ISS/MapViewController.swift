@@ -12,7 +12,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate{
     @IBOutlet weak var txtLabel: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var MoreButton: UIButton!
@@ -21,7 +21,28 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var lon: Double = 0
     var string: String = "Hello World"
     
-//    var coordinatesArray = []
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var pin : Annotation!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mapView.delegate = self
+        
+        let url = "https://api.wheretheiss.at/v1/satellites/25544"
+        getData(url: url)
+        
+        Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { timer in
+            let url = "https://api.wheretheiss.at/v1/satellites/25544"
+            self.getData(url: url)
+                    }
+        
+        txtLabel.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
+        txtLabel.textColor = .black
+        
+        
+        
+    }
         
     func getData(url: String){
             URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
@@ -87,28 +108,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.mapView.addAnnotation(self.pin)
     }
     
-    
-    @IBOutlet weak var mapView: MKMapView!
-    
-    var pin : Annotation!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        mapView.delegate = self
-        
-        let url = "https://api.wheretheiss.at/v1/satellites/25544"
-        getData(url: url)
-        
-        Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { timer in
-            let url = "https://api.wheretheiss.at/v1/satellites/25544"
-            self.getData(url: url)
-                    }
-        
-        txtLabel.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
-        txtLabel.textColor = .black
-        
-        
-    }
     
     func printLatLon(for mapView: MKMapView, lat: Double, lon: Double) {
         print(lat)
